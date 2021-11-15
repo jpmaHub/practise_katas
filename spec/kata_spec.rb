@@ -22,4 +22,30 @@ describe Kata do
       expect(new_kata.square_digits(811)).to eq(6411)
     end
   end
+
+  context 'finds the odd int' do
+    context 'given the array of a single number' do
+      it 'returns the odd number' do
+        expect(new_kata.find_odd_int([0])).to eq(0)
+      end
+    end 
+
+    context 'given the array of three numbers' do
+      it 'returns the odd number' do
+        expect(new_kata.find_odd_int([1,1,2])).to eq(2)
+      end
+    end 
+
+    context 'given the array of five numbers' do
+      it 'returns the odd number' do
+        expect(new_kata.find_odd_int([0,1,0,1,0])).to eq(0)
+      end
+    end 
+
+    context 'given the array of numbers' do
+      it 'returns the odd number' do
+        expect(new_kata.find_odd_int([1,2,2,3,3,3,4,3,3,3,2,2,1])).to eq(4)
+      end
+    end 
+  end 
 end 
